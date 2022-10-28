@@ -1,7 +1,69 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Data Visualization Project</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+
+    <h1 style="text-align:center">Project CPSC 6030</h1>
+    <p><h3>Team:</h3>1. Avinash Komatineni / C13513954 / akomati@g.clemson.edu
+       <br>2. Harika Banda / C11992641 / hbanda@clemson.edu
+       <br>3. Pandu Ranga Avinash Srikhakollu / C37573694 / psrikha@clemson.edu</p>
+    <p><h4>Dataset description:</h4>
+        For our project we have selected Dataset which gives details about TV Shows and 
+        Movies available in OTT Platform Netflix using 11 attributes and 8000+ unique show ids as items</p>
+    <p><h4>Attributes listed in our Dataset:</h4>
+        1. Type<br>
+        2. Title<br>
+        3. director<br>
+        4. cast<br>
+        5. country<br>
+        6. date_added<br>
+        7. rating<br>
+        8. released year<br>
+        9. duration<br>
+        10.listed_in<br>
+        11.description</p>
+    <div>
+        <p>Visualization 1:
+            Content division on Netflix</p>
+        <svg id="contentDivision"></svg>
+        <!-- <script src="script-contentDivision.js"></script> -->
+        <img src="Images/1.jpeg" alt="Bar Chart">
+        <img src="Images/1-1.jpeg" alt="Bar Chart">
+    </div>
+    <div>
+        <p>Visualization 2:
+            Number of releases Amazon VS Netflix</p>
+        <svg id="numberOfReleases"></svg>
+        <!-- <script src="script-numberOfReleases.js"></script> -->
+        <img src="Images/2.jpeg" alt="Bar Chart">
+        <img src="Images/2-2.jpeg" alt="Bar Chart">
+    </div>
+    <div>
+        <p>Visualization 3:
+            Number of TV Shows/Movies Amazon VS Netflix</p>
+        <svg id="numberOfShows"></svg>
+        <!-- <script src="script-numberOfShows.js"></script> -->
+        <img src="Images/3.jpeg" alt="Bar Chart">
+        <img src="Images/3-2.jpeg" alt="Bar Chart">
+    </div>
+    <div>
+        <p>Visualization 4:
+            country wise distribution of Movies and TV shows in Netflix</p>
+        <svg id="countryWiseDistribution"></svg>
+        <!-- <script src="script-countryWiseDistribution.js"></script> -->
+        <img src="Images/4.jpeg" alt="Bar Chart">
+        <img src="Images/4-2.jpeg" alt="Bar Chart">
+    </div>
+    <div>
+        <p>Visualization 5:
+            Year wise rating analysis Amazon VS Netflix</p>
+        <svg id="yearWiseRating"></svg>
+        <!-- <script src="script-yearWiseRating.js"></script> -->
+        <img src="Images/5.jpeg" alt="Bar Chart">
+    </div>
+ </body>
 </html>
