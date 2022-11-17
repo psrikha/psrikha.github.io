@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8"/>
     <title>Data Visualization Project</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+    <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -28,45 +30,26 @@
         9. duration<br>
         10.listed_in<br>
         11.description</p>
-    <div>
-        <h4>Visualization 1:
-            Content division on Netflix</h4>
-        <!-- <svg id="contentDivision"></svg> -->
-        <!-- <script src="script-contentDivision.js"></script> -->
-        <img src="Images/1.jpeg" alt="Visualization">
-        <img src="Images/1-1.jpeg" alt="Visualization">
-    </div>
-    <div>
-        <h4>Visualization 2:
-            Number of releases Amazon VS Netflix</h4>
-        <!-- <svg id="numberOfReleases"></svg> -->
-        <!-- <script src="script-numberOfReleases.js"></script> -->
-        <img src="Images/2.jpeg" alt="Visualization">
-        <img src="Images/2-2.jpeg" alt="Visualization">
-    </div>
-    <div>
-        <h4>Visualization 3:
-            Number of TV Shows/Movies Amazon VS Netflix</h4>
-        <!-- <svg id="numberOfShows"></svg> -->
-        <!-- <script src="script-numberOfShows.js"></script> -->
-        <img src="Images/3-2.jpeg" alt="Visualization">
-        <img src="Images/3.jpeg" alt="Visualization">
-    </div>
-    <div>
-        <h4>Visualization 4:
-            country wise distribution of Movies and TV shows in Netflix</h4>
-        <!-- <svg id="countryWiseDistribution"></svg> -->
-        <!-- <script src="script-countryWiseDistribution.js"></script> -->
-        <img src="Images/4-2.jpeg" alt="Visualization">
-        <img src="Images/4.jpeg" alt="Visualization">
-    </div>
-    <div>
-        <h4>Visualization 5:
-            Year wise rating analysis Amazon VS Netflix</h4>
-        <!-- <svg id="yearWiseRating"></svg> -->
-        <!-- <script src="script-yearWiseRating.js"></script> -->
-        <img src="Images/5.jpeg" alt="Visualization">
-    </div>
+        <div class="box">
+            <h4>Visualization 1:
+                Year wise rating analysis Amazon VS Netflix</h4>
+            <svg id="yearWiseRating"></svg>
+            <script src="script-yearWiseRating.js"></script>
+        </div>
+        <div class="box">
+            <h4>Visualization 2:
+                Comparing no of votes for Average ratings</h4>
+                <svg id="votesVsRatings"></svg>
+            
+                <script src="script-votesVsRatings.js"></script>
+            </div>
+        <h2>other Visualization yet to update</h2>
+        
+      
+            
+            
+    
+    
 </div>
  </body>
 </html>
