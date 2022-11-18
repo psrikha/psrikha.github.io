@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Data Visualization Project</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+    <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <p class="logo">Project CPSC 6030<br>Visualising Netflix & Amazon Prime Video OTT Platform Data</p>
+    <div class="box">
+    <p><h3>Team:</h3>1. Avinash Komatineni / C13513954 / akomati@g.clemson.edu
+       <br>2. Harika Banda / C11992641 / hbanda@clemson.edu
+       <br>3. Pandu Ranga Avinash Srikhakollu / C37573694 / psrikha@clemson.edu</p>
+    <p><h4>Dataset description:</h4>
+        For our project we have selected Dataset which gives details about TV Shows and 
+        Movies available in OTT Platform Netflix using 11 attributes and 8000+ unique show ids as items</p>
+    <p><h4>Attributes listed in our Dataset:</h4>
+        1. Type<br>
+        2. Title<br>
+        3. director<br>
+        4. cast<br>
+        5. country<br>
+        6. date_added<br>
+        7. rating<br>
+        8. released year<br>
+        9. duration<br>
+        10.listed_in<br>
+        11.description</p>
+        <div class="box">
+            <h4>Visualization 1:
+                Year wise rating analysis Amazon VS Netflix</h4>
+            <svg id="yearWiseRating"></svg>
+            <script src="script-yearWiseRating.js"></script>
+        </div>
+        <div class="box">
+            <h4>Visualization 2:
+                Comparing no of votes for Average ratings</h4>
+                <svg id="votesVsRatings"></svg>
+            
+                <script src="script-votesVsRatings.js"></script>
+            </div>
+        <div class="box">
+            <h4>Visualization 3:
+                Running Times of Shows in Horror Genre</h4>
+                <svg id="RunningTimes"></svg>
+            
+                <script src="script-RunningTimes.js"></script>
+            </div>
+        <h2>other Visualization yet to update</h2>
+        
+      
+            
+            
+    
+    
+</div>
+ </body>
+</html>
