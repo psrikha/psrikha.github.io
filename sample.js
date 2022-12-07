@@ -5,11 +5,11 @@ d3.json("output.geojson").then(function(themap){
 
        
         var svg=d3.select("svg")
-        .style("width",700)
+        .style("width",750)
         .style("height",400)
 		
         var projection=d3.geoEqualEarth() //geoMercator geoEqualEarth
-                        .fitWidth(700,{type:"Sphere"})
+                        .fitWidth(750,{type:"Sphere"})
         var pathGenerator=d3.geoPath(projection)       
         var sea=svg.append("path")
                     .attr("d",pathGenerator({type:"Sphere"}))
@@ -58,7 +58,7 @@ d3.json("output.geojson").then(function(themap){
                         let mouseOver = function(d) {
                             d3.selectAll(".Country")
                               .transition()
-                              .duration(200)
+                              .duration(300)
                               .style("opacity", .5)
                             d3.select(this)
                               .transition()
@@ -109,10 +109,10 @@ d3.json("output.geojson").then(function(themap){
 
  function content_type(country_name){
 
-    var divWidth = 400
+    var divWidth = 500
     var margin = {top: 30, right: 0, bottom: 20, left: 0},
-        width = divWidth -25,
-        height = 400 - margin.top - margin.bottom,
+        width = divWidth ,
+        height = 380 - margin.top - margin.bottom,
         formatNumber = d3.format(","),
         transitioning;
     // sets x and y scale to determine size of visible boxes
@@ -127,8 +127,8 @@ d3.json("output.geojson").then(function(themap){
             .paddingInner(0)
             .round(false);
     var svg = d3.select('#chart').append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.bottom + margin.top)
+        .attr("width", width + margin.left + margin.right+75)
+        .attr("height", height + margin.bottom + margin.top+75)
         .style("margin-left", -margin.left + "px")
         .style("margin.right", -margin.right + "px")
         .append("g")
@@ -138,12 +138,12 @@ d3.json("output.geojson").then(function(themap){
             .attr("class", "grandparent");
         grandparent.append("rect")
             .attr("y", -margin.top)
-            .attr("width", width)
+            .attr("width", width+10)
             .attr("height", margin.top)
             .attr("fill", '#bbbbbb');
         grandparent.append("text")
             .attr("x", 6)
-            .attr("y", 6 - margin.top)
+            .attr("y", 6- margin.top)
             .attr("dy", ".75em");
     d3.csv("clean_dataset.csv").then( function(data) {
     var finaldata={}
@@ -224,6 +224,7 @@ d3.json("output.geojson").then(function(themap){
                 .datum(d.parent)
                 .on("click", transition)
                 .select("text")
+                .style("font-size", "18px")
                 .text(name(d));
             // grandparent color
             grandparent
@@ -335,7 +336,7 @@ d3.json("output.geojson").then(function(themap){
                     return y(d.y0);
                 })
                 .attr("width", function (d) {
-                    return x(d.x1) - x(d.x0);
+                    return x(d.x1) - x(d.x0)+10;
                 })
                 .attr("height", function (d) {
                     return y(d.y1) - y(d.y0);
@@ -364,7 +365,7 @@ d3.json("output.geojson").then(function(themap){
             return breadcrumbs(d) +
                 (d.parent
                 ? " -  Click to zoom out"
-                : " - Click inside square to zoom in");
+                : " - Click on a box to zoom in");
         }
         function breadcrumbs(d) {
             
@@ -396,7 +397,7 @@ function content_violin(country_name,content_type){
     var svg = d3.select("#violin")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("height", height + margin.top + margin.bottom+100)
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
@@ -529,7 +530,20 @@ function content_violin(country_name,content_type){
                     d3.select(this).transition()
                     .duration('50')
                     .attr('opacity', '.85');})
-            
+        svg.append("text")
+                    .attr("class", "x label")
+                    .attr("text-anchor", "middle")
+                    .attr("x", width)
+                    .attr("y", height+30)
+                    .text("Genre");
+                
+        svg.append("text")
+                    .attr("class", "y label")
+                    .attr("text-anchor", "end")
+                    .attr("y",-40)
+                    .attr("dy", ".75em")
+                    .attr("transform", "rotate(-90)")
+                    .text("Average Rating");
 
     });
 
