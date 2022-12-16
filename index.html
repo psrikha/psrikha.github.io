@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Data Visualization Project</title>
+
+    <script src="https://d3js.org/d3.v5.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleTree.css">
+  </head>
+  <body>
+    <div >
+      <script>
+        window.onload=function(){
+          country_type();
+          content_type('');
+          content_violin('','');
+          content_rating('','');
+            }
+      </script>
+      <script src="sample.js"></script>
+      <center><h1>Netflix Data Visualization</h2></center>
+      
+      <div >
+        <div class="centered">
+          <h2><div id='details'></div></h2>
+      <div id="bubble"></div></div></div>
+      <div class="split uright">
+        <div class="centered2">
+      <div  id="chart"></div></div></div>
+      <div class="split2 uleft2">
+        <div class="centered3">
+      <div  id="violin"></div></div></div>
+      <div class="split2 uright2">
+        <div class="centered2">
+          <h3>List of Titles with Ratings and Runtime  </h3>
+          <select id="selectButton"></select>
+          
+      <div  id="rating"></div></div></div>
+    </div>
+    
+
+  </body>
+</html>
