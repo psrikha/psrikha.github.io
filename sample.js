@@ -357,11 +357,15 @@ let texts = svg.selectAll(null)
                     transitioning = false;
                 })
                 console.log(d)
+                exp=d.data.name
+                if(exp=='Content_type'){
+                    exp=''
+                }
                 document.getElementById("violin").innerHTML=""
-                content_violin(country_name,d.data.name)
+                content_violin(country_name,exp)
                 document.getElementById("rating").innerHTML=""
-                content_rating(country_name,d.data.name)
-                document.getElementById("selectButton").innerHTML=""
+                content_rating(country_name,exp)
+                document.getElementById("selectButton").innerHTML="";;
             }
             return g;
         }
